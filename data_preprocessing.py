@@ -134,8 +134,8 @@ def preprocessdata(data):
     return data
 
 def Kmeans(data,data_dic):
-    CLUSTER_NUM = 16;
-    MAX_ITERATIONS = 50;
+    CLUSTER_NUM = 70;
+    MAX_ITERATIONS = 100;
     iterations = 0
     
     centroids=getRandomCentroids(data, CLUSTER_NUM)

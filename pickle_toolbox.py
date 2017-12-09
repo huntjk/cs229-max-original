@@ -56,39 +56,13 @@ def opendict(path=''):
     return dic 
 
 
-
-#visualization code modified from https://matplotlib.org/examples/mplot3d/surface3d_demo3.html
-def plot3d(data_dic,skt):
-    fig = plt.figure()
-    ax = fig.gca(projection='3d')
-    
-    # Make data.
-    X = data_dic['lat']
-    Y = data_dic['lon']
-    X, Y = np.meshgrid(X, Y)
-    Z = skt
-    
-    # Plot the surface.
-    surf = ax.plot_surface(X, Y, Z, cmap=cm.coolwarm,
-                           linewidth=0, antialiased=False)
-    
-    # Customize the z axis.
-    #ax.set_zlim(-1.01, 1.01)
-    ax.zaxis.set_major_locator(LinearLocator(10))
-    ax.zaxis.set_major_formatter(FormatStrFormatter('%.02f'))
-    
-    # Add a color bar which maps values to colors.
-    fig.colorbar(surf, shrink=0.5, aspect=5)
-    
-    return plt.show()
-
 #visualization code for a color mesh (you can see the continents)
 def plot3dcolormesh(data_dic,skt):
-    fig = plt.figure()
+    #fig = plt.figure()
     
     # Make data.
-    X = data_dic['lat']
-    Y = data_dic['lon']
+    Y = data_dic['lat']
+    X = data_dic['lon']
     X, Y = np.meshgrid(X, Y)
     Z = skt
     
